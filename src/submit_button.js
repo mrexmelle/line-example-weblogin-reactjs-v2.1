@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 import randomString from 'random-string';
 
 class SubmitButton extends Component

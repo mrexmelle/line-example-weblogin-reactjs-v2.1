@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import SubmitButton from './submit_button.js';
 
-class App extends Component {
+class Welcome extends Component {
   render() {
     return (
-      <div className="App">
+      <div className="Welcome">
         <SubmitButton />
       </div>
     );
   }
 }
 
-export default App;
+export default Welcome;
