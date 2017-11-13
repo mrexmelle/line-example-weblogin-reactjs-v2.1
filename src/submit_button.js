@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import randomString from 'random-string';
+import secureRandom from 'secure-random';
+import base64url from 'base64-url';
 
 class SubmitButton extends Component
 {
@@ -9,7 +10,7 @@ class SubmitButton extends Component
     
     render()
     {
-        var token=randomString({length: 32});
+        const token=base64url.encode(secureRandom(32));
         
         return <div><form action="https://access.line.me/oauth2/v2.1/authorize" method="GET">
             <input type="hidden" name = "response_type" value="code" />
