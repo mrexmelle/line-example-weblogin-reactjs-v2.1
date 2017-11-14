@@ -6,6 +6,7 @@
     "react": "^16.1.0",
     "react-dom": "^16.1.0",
     "react-scripts": "1.0.17",
+    "react-cookies": "0.1.0",
     "secure-random": "1.1.1",
     "react-router-dom": "4.2.2",
     "base64-url": "2.0.1"

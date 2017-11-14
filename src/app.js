@@ -4,7 +4,7 @@ import Welcome from './welcome';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component
-{
+{    
     render()
     {
         console.log('App::render - start');

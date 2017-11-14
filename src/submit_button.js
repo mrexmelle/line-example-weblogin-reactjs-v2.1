@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import secureRandom from 'secure-random';
 import base64url from 'base64-url';
+import cookie from 'react-cookies';
 
 class SubmitButton extends Component
 {
@@ -8,9 +9,16 @@ class SubmitButton extends Component
     static REDIRECT_URI='http://localhost:3000/line/auth';
     static NONCE='nonce';
     
+    constructor(props)
+    {
+        super(props);
+        cookie.save('com.linecorp.nonce', SubmitButton.NONCE);
+    }
+    
     render()
     {
         const token=base64url.encode(secureRandom(32));
+        cookie.save('com.linecorp.token', token);
         
         return <div><form action="https://access.line.me/oauth2/v2.1/authorize" method="GET">
             <input type="hidden" name = "response_type" value="code" />
